@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/solid-js": "^2.1.0",
     "@fontsource/montserrat": "^4.5.14",
+    "@types/three": "^0.155.0",
     "astro": "^2.1.9",
     "solid-js": "^1.4.3"
   },

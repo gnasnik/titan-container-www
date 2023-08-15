@@ -1,50 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Counter from "../components/Counter";
 import pingwind from "../assets/pingwind.jpg";
 import { Image } from "astro:assets";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="container flex flex-col gap-8 p-10">
-    <Image
-      src={pingwind}
-      alt="Pinguin on a rock"
-      width={800}
-      class="object-cover rounded-xl shadow-xl"
-    />
-    <h1 class="text-2xl font-bold underline decoration-primary">
-      Welcome to <span class="text-primary font-black">Pingwind</span>!
-    </h1>
-    <p>
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Pingwind" message above.
-    </p>
-    <h2 class="text-lg font-bold">Counter with SolidJS</h2>
-    <Counter client:load />
-    <ul role="list" class="flex flex-row gap-5 flex-wrap">
-      <Card
-        href="https://docs.astro.build/"
-        title="Astro docs"
-        body="Learn how Astro works and explore the official API docs."
-      />
-      <Card
-        href="https://www.solidjs.com/docs/latest/api"
-        title="SolidJS docs"
-        body="Explore the official SolidJS docs."
-      />
-      <Card
-        href="https://daisyui.com/docs/themes/"
-        title="DasiyUI Themes"
-        body="Explore starter themes."
-      />
-      <Card
-        href="https://unocss.dev"
-        title="UnoCSS docs"
-        body="Explore the official Unocss docs."
-      />
-    </ul>
+<Layout title="Titan Container">
+  <main class="container flex flex-col gap-8 p-10 mt-10 min-h-screen justify-center">
+    <!-- <Image
+    src={pingwind}
+    alt="Pinguin on a rock"
+    width={800}
+    class="object-cover rounded-xl shadow-xl"
+  /> -->
+  <h1 class="text-2xl font-bold decoration-blue-400">
+    Build Your Applications on <span class="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-pink-500  to-blue-500 font-black">Titan Container</span>!
+  </h1>
+  <p>
+  
+    <strong>Titan Container</strong> 
+    is an important component of the Titan network. It is a container management tool specifically designed for decentralized cloud computing networks. Leveraging the latest container technology, Titan-Container assists developers in effortlessly deploying and managing applications on the Titan network.
+
+  </p>
+
+  <div class="flex justify-center items-center">
+    <a class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-op-80" href="/deploy">
+      Get Started
+    </a>
+  </div>
+  
   </main>
 </Layout>
