@@ -1,10 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/Sidebar";
+import MainContent from "../components/MainContent";
 ---
 
 
-<Layout title="Welcome to Astro.">
-    <main class="container flex flex-col gap-8 py-10 mt-10 min-h-screen justify-center">
-        <h1>Deployment</h1>
-    </main>
+<Layout title="">
+    <div class="overflow-auto flex flex-row min-h-max">
+        <Sidebar isOpen={true}></Sidebar>
+        <MainContent></MainContent>
+    </div>
+    
 </Layout>

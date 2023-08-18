@@ -17,10 +17,20 @@ import Footer from "../components/Footer";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#232324" />
     <title>{title}</title>
   </head>
-  <body class="text-base">
-    <Header></Header>
+  <body class="text-base bg-base fg-base min-h-screen">
+    <Header client:only></Header>
     <slot />
   </body>
 </html>
+
+<script>
+  (function() {
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    const setting = localStorage.getItem('theme') || 'auto'
+    if (setting === 'dark' || (prefersDark && setting !== 'light'))
+      document.documentElement.classList.toggle('dark', true)
+  })()
+  </script>
