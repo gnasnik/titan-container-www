@@ -32,14 +32,16 @@ export default (props: Props) => {
             <span class="i-carbon-rocket ml-2"></span>
           </header>
           <nav class="px-4">
+            <ul>
             <For each={menuList}>
                 {instance => (
-                  <div class="text-xs hover:bg-op-80 py-2 px-4 text-base hover:bg-gray-100 rounded dark:hover:bg-gray-500">
+                  <li class="text-xs hover:bg-op-80 py-2 px-4 text-base hover:bg-gray-100 rounded dark:hover:bg-gray-500">
                     <span class={`${instance.icon} mr-2`}></span>
                     <span> {instance.title}</span>
-                  </div>
+                  </li>
                 )}
             </For>
+            </ul>
           </nav>
        </div>
     </div>
