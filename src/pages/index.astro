@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import pingwind from "../assets/pingwind.jpg";
-import { Image } from "astro:assets";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 ---
 
 <Layout title="">
-  <main class="container flex flex-col gap-8 p-10 mt-10 justify-center text-center md:text-left">
+  <Header client:only></Header>
+  <main class="container flex flex-col gap-8 p-10 justify-center text-center md:text-left">
     <!-- <Image
     src={pingwind}
     alt="Pinguin on a rock"
@@ -23,7 +24,7 @@ import { Image } from "astro:assets";
   </p>
 
   <div class="flex justify-center items-center">
-    <a class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-op-80" href="/deploy">
+    <a class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-op-80" href="/deployment">
       Get Started
     </a>
   </div>

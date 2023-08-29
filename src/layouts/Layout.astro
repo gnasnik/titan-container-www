@@ -6,8 +6,6 @@ export interface Props {
 const { title } = Astro.props;
 
 import "@fontsource/montserrat";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 ---
 
 <!DOCTYPE html>
@@ -21,7 +19,6 @@ import Footer from "../components/Footer";
     <title>{title}</title>
   </head>
   <body class="text-base bg-base fg-base min-h-screen">
-    <Header client:only></Header>
     <slot />
   </body>
 </html>

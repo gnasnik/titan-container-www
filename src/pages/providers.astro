@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/Sidebar";
+---
+
+
+<Layout title="">
+    <div class="flex flex-row">
+        <Sidebar isOpen={true} client:only></Sidebar>
+        <div class="bg-base dark:bg-gray-100 w-full h-screen">
+            <h1>Providers</h1>
+        </div> 
+    </div>
+</Layout>
